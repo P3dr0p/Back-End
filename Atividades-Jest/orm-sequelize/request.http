@@ -1,0 +1,18 @@
+POST http://localhost:4011/users
+Content-Type: application/json
+
+{
+    "name": "Pedro",
+    "email": "pedro.p.almeida@aluno.senai.br"
+}
+
+###
+
+GET http://localhost:4011/users
+
+###
+
+DELETE http://localhost:4011/users/2
+
+###
+PUT http://localhost:4011/users/

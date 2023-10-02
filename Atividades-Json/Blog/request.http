@@ -1,0 +1,12 @@
+POST http://localhost:3200/cadastro
+content-type: application/json
+
+{
+    "nome": "Lucas Torres",
+    "email": "L.Torres@gmail.com",
+    "senha": "035480AVX"
+}
+
+###
+
+GET http://localhost:3200/cadastro

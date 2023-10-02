@@ -1,0 +1,27 @@
+POST http://localhost:3001/produtos 
+content-type: application/json
+
+{
+    "name": "teste 15",
+    "price": "29.9",
+    "description": "Teste 10 funcionou"
+}
+
+###
+
+GET http://localhost:3001/produtos
+
+###
+
+GET http://localhost:3001/produtos/dff5d573-bb64-4492-b86e-e65e699c34cc
+
+###
+
+PUT http://localhost:3001/produtos/dff5d573-bb64-4492-b86e-e65e699c34cc
+content-Type: application/json
+
+{
+    "name": "Teste 20",
+    "price": 28.90,
+    "description": "Teste 10 funcionou"
+}
