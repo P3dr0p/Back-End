@@ -1,0 +1,7 @@
+npm: Inicializa o gerenciador de pacotes.
+src: Pasta raiz responsavel por conter toda aplicação.
+models:
+views: 
+controll: Realiza a ligação entre o model e o view.
+database: Responsavel pela conexão com o banco de dados.
+migrations: "Esqueleto" da tabela no banco de dados.
