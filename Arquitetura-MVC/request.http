@@ -26,7 +26,6 @@ content-Type: application/json
 DELETE  http://localhost:3333/users/3 
 
 ###
-
 POST http://localhost:3333/thoughts
 content-Type: application/json
 
@@ -36,5 +35,4 @@ content-Type: application/json
 }
 
 ###
-
 GET https://localhost:3333/thoughts
