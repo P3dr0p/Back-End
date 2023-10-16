@@ -1,7 +1,19 @@
 npm: Inicializa o gerenciador de pacotes.
+Database: Responsavel pela conexão com o banco de dados.
 src: Pasta raiz responsavel por conter toda aplicação.
-models:
-views: 
-controll: Realiza a ligação entre o model e o view.
-database: Responsavel pela conexão com o banco de dados.
-migrations: "Esqueleto" da tabela no banco de dados.
+Migrations: "Esqueleto" da tabela no banco de dados.
+
+/ Arquitetura MVC  /
+Controller: Realiza a ligação entre o model e o view.
+Models:
+Views: 
+
+/ Routes / 
+createUser: Rota para cadastrar os usuários
+findAllUsers: Rota para encontrar todos os usuários cadastrados na aplicação
+findUser: Rota para encontrar um usuário em espécifico
+updateUser: Rota para atualizar um registro específico no banco de dados
+deleteUser: Rota para deletar um registro em específicono banco de dados
+
+Função create: Responsável pro criar ou inserir os dados.
+module.exports: Responsável por buscar todos os pensamentos cadastrados.
