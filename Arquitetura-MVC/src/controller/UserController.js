@@ -1,18 +1,17 @@
-const { update } = require("../models/User");
 const User = require("../models/User");
 
 module.exports = {
     async createUser(request, response) {
-        const { name, email, password, confirm_password} = request.body
+        const { name, email, password, confirm_password } = request.body
 
-        const user = await User.create({
+        const users = await User.create({
             name,
             email,
             password,
             confirm_password
         });
 
-        console.log(user);
+        console.log(users);
 
         return response.json(User);
     },
@@ -26,16 +25,16 @@ module.exports = {
     async findUser(request, response) {
         const { id } = request.params
 
-        const User = await User.findOne({ where: {id: id} });
+        const users = await User.findOne({ where: {id: id} });
 
-        return response.json(User);
+        return response.json(users);
     },
 
     async updateUser(request, response) {
         const { id } = request.params
         const { name, email, password, confirm_password } = request.body
 
-        const User = await User.update(
+        const users = await User.update(
             {
                 name,
                 email,
@@ -47,13 +46,13 @@ module.exports = {
             }
         );
 
-        return response.json(User);
+        return response.json(users);
     },
 
     async deleteUser(request, response) {
         const { id } = request.params
 
-        const User = await User.destroy({ where: {id: id} });
+        const users = await User.destroy({ where: {id: id} });
 
         return response.json({ message: "Usuário deletado com sucesso" });
     }

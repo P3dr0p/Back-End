@@ -5,8 +5,8 @@ Migrations: "Esqueleto" da tabela no banco de dados.
 
 / Arquitetura MVC  /
 Controller: Realiza a ligação entre o model e o view.
-Models:
-Views: 
+Model:
+View: 
 
 / Routes / 
 createUser: Rota para cadastrar os usuários

@@ -15,7 +15,7 @@ module.exports = {
         return response.json(thought);
     },
 
-    async updateUser(request, response) {
+    async updateThought(request, response) {
         const { id, title, description } = request.body
 
         const thought = await thought.update(
@@ -31,8 +31,8 @@ module.exports = {
         return response.json(thought);
     },
 
-    async deleteUser(request, response) {
-        const { id, title, description } = request.params
+    async deleteThought(request, response) {
+        const { id } = request.params
 
         const thought = await thought.destroy({ where: {id: id} });
 
