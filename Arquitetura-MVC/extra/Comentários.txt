@@ -9,11 +9,12 @@ Model:
 View: 
 
 / Routes / 
-createUser: Rota para cadastrar os usuários
-findAllUsers: Rota para encontrar todos os usuários cadastrados na aplicação
-findUser: Rota para encontrar um usuário em espécifico
-updateUser: Rota para atualizar um registro específico no banco de dados
-deleteUser: Rota para deletar um registro em específicono banco de dados
+create: Rota para cadastrar itens
+findAll: Rota para encontrar todos os itens cadastrados na aplicação
+find: Rota para encontrar um iten em espécifico
+update: Rota para atualizar um iten específico no banco de dados
+delete: Rota para deletar um iten em específicado no banco de dados
+dashboard: Redireciona uma página da dashboard
 
 Função create: Responsável pro criar ou inserir os dados.
 module.exports: Responsável por buscar todos os pensamentos cadastrados.

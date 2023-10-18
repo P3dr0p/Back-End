@@ -1,6 +1,10 @@
 const Thought = require("../models/Thought");
 
 module.exports = {
+    async dashboard(request, response){
+        return response.render("thoughts/dashboard")
+    },
+
     async findAllThoughts(request, response) {
         const thoughts = await Thought.findAll({ raw: true });
 
@@ -15,26 +19,33 @@ module.exports = {
         return response.json(thought);
     },
 
-    async updateThought(request, response) {
-        const { id, title, description } = request.body
+    async findThought(request, response) {
+        const { id } = request.params
 
-        const thought = await thought.update(
+        const thought = await Thought.findOne({ where: {id: id} });
+
+        return response.json(thought);
+    },
+
+    async updateThought(request, response) {
+        const { id } = request.params
+        const { title, description } = request.body
+
+        const thought = await Thought.update(
             {
-                title,
-                description
+                title, description
             },
             {
                 where: { id: id }
             }
         );
-
         return response.json(thought);
     },
 
     async deleteThought(request, response) {
         const { id } = request.params
 
-        const thought = await thought.destroy({ where: {id: id} });
+        const thought = await Thought.destroy({ where: {id: id} });
 
         return response.json({ message: "Pensamento deletado com sucesso" });
     }

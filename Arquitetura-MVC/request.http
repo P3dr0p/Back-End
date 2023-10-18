@@ -36,3 +36,6 @@ content-Type: application/json
 
 ###
 GET https://localhost:3333/thoughts
+
+###
+GET http://localhost:3333/thoughts/1
