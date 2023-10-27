@@ -2,7 +2,8 @@ const Thought = require("../models/Thought");
 
 module.exports = {
     async dashboard(request, response){
-        return response.render("thoughts/dashboard")
+        const thoughts = await Thought.findAll({ raw: true })
+        return response.render("thoughts/dashboard", { thoughts })
     },
 
     async findAllThoughts(request, response) {
@@ -16,6 +17,14 @@ module.exports = {
 
         const thought = await Thought.create({title, description})
 
+        try{
+            if(thought) {
+                return response.redirect("/thoughts/dashboard")
+            }
+        } catch(error) {
+            console.error(error);
+        }
+
         return response.json(thought);
     },
 
@@ -25,6 +34,14 @@ module.exports = {
         const thought = await Thought.findOne({ where: {id: id} });
 
         return response.json(thought);
+    },
+
+    async showPageEditthought(request, response) {
+        const { id } = request.params;
+
+        const thought = await Thought.findOne({ where: { id: id }, raw: true });
+    
+        return response.render("thoughts/edit")
     },
 
     async updateThought(request, response) {

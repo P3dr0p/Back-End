@@ -8,18 +8,21 @@
             <a href="/thought-create">Criar Pensamento</a>
         </div>
     </div>
+    
     <div class="content">
         <div class="subtitle">
             <p>Seus pensamentos:</p>
         </div>
 
+        {{#each thoughts}}
         <div class="thoughts-list">
-            <p>PHP é melhor que NodeJS</p>
+            <p>{{ this.description }}</p>
 
             <div class="buttons">
                 <a href="">Editar</a>
                 <a href="">Excluir</a>
             </div>
         </div>
+        {{/each}}
     </div>
 </section>

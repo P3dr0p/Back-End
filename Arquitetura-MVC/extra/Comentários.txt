@@ -1,6 +1,6 @@
-npm: Inicializa o gerenciador de pacotes.
+NPM: Inicializa o gerenciador de pacotes.
 Database: Responsavel pela conexão com o banco de dados.
-src: Pasta raiz responsavel por conter toda aplicação.
+SRC: Pasta raiz responsavel por conter toda aplicação.
 Migrations: "Esqueleto" da tabela no banco de dados.
 
 / Arquitetura MVC  /
@@ -16,5 +16,5 @@ update: Rota para atualizar um iten específico no banco de dados
 delete: Rota para deletar um iten em específicado no banco de dados
 dashboard: Redireciona uma página da dashboard
 
-Função create: Responsável pro criar ou inserir os dados.
-module.exports: Responsável por buscar todos os pensamentos cadastrados.
+Função create: Responsável por criar ou inserir os dados.
+module.exports: Responsável por buscar todos itens cadastrados.

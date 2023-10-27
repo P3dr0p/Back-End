@@ -6,14 +6,15 @@ const router = express.Router();
 
 router.get("/thoughts/dashboard", ThoughtsController.dashboard);
 
-router.get("/thoughts", ThoughtsController.findAllThoughts)
+router.post("/thoughts/create", ThoughtsController.createThought);
 
-router.post("/thoughts", ThoughtsController.createThought)
+router.get("/thoughts/:id", ThoughtsController.findThought);
 
-router.get("/thoughts/:id", ThoughtsController.findThought)
+router.get("/thoughts", ThoughtsController.findAllThoughts);
+router.post("/thoughts", ThoughtsController.createThought);
 
-router.put("/thoughts/:id", ThoughtsController.updateThought)
+router.get("/thoughts/:id", ThoughtsController.findThought);
 
-router.delete("/thoughts/:id", ThoughtsController.deleteThought)
+router.delete("/thoughts/:id", ThoughtsController.deleteThought);
 
 module.exports = router;
