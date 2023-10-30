@@ -19,8 +19,8 @@
             <p>{{ this.description }}</p>
 
             <div class="buttons">
-                <a href="">Editar</a>
-                <a href="">Excluir</a>
+                <a href="/thoughts/edit/{{ this.id }}">Editar</a>
+                <a href="/thoughts/remove/{{ this.id }}">Excluir</a>
             </div>
         </div>
         {{/each}}
