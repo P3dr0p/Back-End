@@ -86,6 +86,11 @@
     color: #068FFF;
 }
 
+ .dashboard .content .thoughts-list .buttons a{
+    background-color: #068FFF;
+    color: white;
+ }
+
 .dashboard .content .thoughts-list .buttons form button{
     background: none;
     border: 2px solid #068FFF;
