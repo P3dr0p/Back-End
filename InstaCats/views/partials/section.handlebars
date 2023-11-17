@@ -1,0 +1,63 @@
+<section class="section-container">
+    <div class="box-3">
+        <img src="/public/assets/img/cat01.jpg" alt="">
+        <img src="/public/assets/img/cat02.jpg" alt="">
+        <img src="/public/assets/img/cat05.jpg" alt="">
+    </div>
+
+    <div class="box-2">
+        <img src="/public/assets/img/cat02.jpg" alt="">
+        <img src="/public/assets/img/cat05.jpg" alt="">
+    </div>
+
+    <div class="box-1">
+        <img src="/public/assets/img/cat04.jpg" alt="">
+    </div>
+
+    <div class="box-3">
+        <img src="/public/assets/img/cat12.jpg" alt="">
+        <img src="/public/assets/img/cat09.jpg" alt="">
+        <img src="/public/assets/img/cat06.jpg" alt="">
+    </div>
+
+    <div class="box-2">
+        <img src="/public/assets/img/cat03.jpg" alt="">
+        <img src="/public/assets/img/cat13.jpg" alt="">
+    </div>
+
+    <div class="box-1">
+        <img src="/public/assets/img/cat07.jpg" alt="">
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body img-container">
+                    <img src="/public/assets/img/cat01.jpg" alt="">
+                </div>
+
+                <form action="" method="post" id="interactionForm">
+                    <div class="barra-interaçao">
+                        <button type="button" class="btn btn-outline-danger">
+                            <i class="ph-fill ph-heart"></i>
+                        </button>
+
+                        <input type="text" name="comment" class="input-comentario" placeholder="Escreva um comentário...">
+                        
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const likeButton = document.querySelector(".btn-outline-danger");
+
+            likeButton.addEventListener("click", () => {
+                likeButton.classList.toggle("btn-danger")
+            });
+        });
+    </script>
