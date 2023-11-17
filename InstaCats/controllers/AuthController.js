@@ -2,7 +2,7 @@
 const User = require('../models/User')
 
 //Dependência para criptografia
-const 
+const  bcrypt = require('bcryptjs')
 
 module.exports = class AuthController{
     static login(require, response){
