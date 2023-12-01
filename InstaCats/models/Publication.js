@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 
 const db = require("../db/conn");
 
-const Publication = db.define("Publication", {
+const Publication = db.define('Publication', {
     image: {
         type: DataTypes.STRING,
         allowNull: false,

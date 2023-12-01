@@ -9,7 +9,10 @@ const app = express();
 const conn = require('./db/conn')
 
 // Importar as tabelas - Models
-const User = require('./models/User');
+const User = require('./models/User')
+const Publication = require('./models/Publication')
+const Like = require('./models/Like')
+const Comment = require('./models/Comment')
 
 // Importar as ROTAS - router
 const authRouters = require('./routes/authRouters')

@@ -6,15 +6,12 @@ const db = require("../db/conn");
 const User = require("./User");
 const Publication = require("./Publication");
 
-const Like = db.define("Like", {
-    id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
+const Like = db.define('Like', {});
 
-    },
-});
+Like.belongsTo(User);
+Like.belongsTo(Publication);
 
-User.belongsToMany(Publication, { through: "Like" });
-Publication.belongsToMany(User, { through: "Like" });
+User.hasMany(Like)
+Publication.hasMany(Like)
 
 module.exports = Like;
