@@ -16,5 +16,4 @@ update: Rota para atualizar um iten específico no banco de dados
 delete: Rota para deletar um iten em específicado no banco de dados
 dashboard: Redireciona uma página da dashboard
 
-Função create: Responsável por criar ou inserir os dados.
 module.exports: Responsável por buscar todos itens cadastrados.
